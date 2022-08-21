@@ -11,12 +11,12 @@ const CreditField = ({onBlur, creditHandler, termError, termDirty, sumDirty, sum
             ?
             resultRequest
                 ?
-                <div className="blocks-wrapper success-request">
+                <div className='blocks-wrapper success-request'>
                     КРЕДИТНАЯ ЗАЯВКА НА СУММУ {inputValue.sumCredit} РУБЛЕЙ УСПЕШНО ОТПРАВЛЕНА
                 </div> 
                 : 
-                <div className="blocks-wrapper">
-                    <div className="lds-ring">
+                <div className='blocks-wrapper'>
+                    <div className='lds-ring'>
                         <div></div>
                         <div></div>
                         <div></div>

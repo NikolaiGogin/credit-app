@@ -11,7 +11,7 @@ const CalcInputUI = ({title, inscription, name, dataDirty, dataError, ...props})
                     className={classes.creditInput}
                     type='text' 
                     placeholder='0'
-                    autoComplete="off"
+                    autoComplete='off'
                     name={name}
                 />
                 <div className={classes.creditInputInscription}>

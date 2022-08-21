@@ -4,7 +4,7 @@ import CreditHeader from './CreditHeader';
 
 const CreditApp = () => {
     return (
-        <div className="credit-calculator">
+        <div className='credit-calculator'>
             <CreditHeader/>
             <CreditBody/>
         </div>

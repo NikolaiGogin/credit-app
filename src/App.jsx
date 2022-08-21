@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import './styles/App.css';
 import './styles/loader.css';
-import CreditApp from "./components/CreditApp";
-import { CountContext } from "./context";
+import axios from 'axios';
+import CreditApp from './components/CreditApp';
+import { CountContext } from './context';
 
 function App() {
     const [inputValue, setInputValue] = useState({
@@ -38,9 +39,14 @@ function App() {
     return 0;
   }
 
-  function emulationRequest () {
+  async function emulationRequest () {
     setIsDataLoading(true);
-
+    try {
+      const response = await axios.post('https://jsonplaceholder.typicode.com/posts', { sumCredit: inputValue.sumCredit, termCredit: inputValue.termCredit});
+      console.log('Returned data:', response);
+    } catch (e) {
+      console.log(`Axios request failed: ${e}`);
+    }
     setTimeout(() => {
       setResultRequest(true);
     }, 2000);
@@ -52,7 +58,7 @@ function App() {
       isDataLoading, emulationRequest, resultRequest
     }}>
       <div className='app'>
-        <div className="wrapper">
+        <div className='wrapper'>
           <h1 className='title'>ЗАЯВКА НА КРЕДИТ</h1>
           <hr className='hr'/>
           <CreditApp/>
