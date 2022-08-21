@@ -1,0 +1,7 @@
+.CreditButton {
+    background-color: rgb(98, 212, 83);
+    padding: 15px 30px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
